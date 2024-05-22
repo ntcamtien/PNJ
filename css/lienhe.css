@@ -1,0 +1,141 @@
+.features {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0 auto 10px auto;
+}
+
+.feature-box {
+    background-color:rgb(198, 210, 216);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+
+   
+}
+
+.feature-box .icon {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px auto;
+    width: 60px;
+    height: 60px;
+}
+
+.feature-box .icon img {
+    width: 100%
+    
+}
+
+.feature-box h3 {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #3f3d3d;
+}
+
+.feature-box p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+
+.contact-section {
+    width: 100%;
+    max-width: 960px; /* Tăng max-width để có nhiều không gian hơn */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 48px 16px;
+}
+
+.contact-intro > * + * {
+    margin-top: 16px;
+}
+
+.contact-title {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.contact-description {
+    color: rgb(107 114 128);
+}
+
+/* CSS cho map*/
+.contact-form-map {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-map {
+    flex: 0.4;
+    margin-right: 20px;
+}
+
+.contact-form {
+    flex: 0.6; /* Tăng flex để form chiếm nhiều không gian hơn */
+}
+
+/* CSS cho Form */
+
+.form-group-container {
+    display: grid;
+    gap: 16px;
+    margin-top: 32px;
+  
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    margin-bottom: 8px;
+}
+
+.form-input,
+.form-textarea {
+    padding: 8px;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    height: 40px;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.form-input::placeholder,
+.form-textarea:focus-visible {
+    color: #6b7280;
+}
+
+.form-input:focus-visible,
+.form-textarea:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+.form-textarea {
+    min-height: 80px;
+}
+
+.form-submit {
+    width: 100%;
+    margin-top: 19.2px;
+    background-color: #3124ca;
+    color: #fff;
+    padding: 13px 5px;
+    border-radius: 6px;
+}
+
+
+

@@ -1,0 +1,170 @@
+/* list vị trí ứng tuyển */
+.job-listings {
+    padding: 25px 0 ;
+    background: #f4f4f4;
+}
+
+.job-listings .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.job-listings h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.job {
+    background: #d1dde0;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.job-image {
+    width: 150px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.job-details {
+    flex: 1;
+}
+
+.job h3 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.job p {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.job .btn {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+ 
+}
+
+.job .btn:hover {
+    background: #555;
+}
+
+
+
+/* CSS hiển thị và ẩn form ứng tuyển */
+.hidden {
+    display: none;
+}
+
+.body-tuyendung {
+    margin: 50px;
+    width: 90%;
+}
+
+.tuyendung-header {
+    height: 40px;
+    font-weight: bold;
+    line-height: 40px;
+    padding-left: 10px;
+    background: rgb(77, 195, 241);
+    text-align: center;
+}
+
+.tuyendung-info {
+    margin: 10px;
+}
+
+.tieude {
+    color: rgb(3, 3, 3);
+    text-align: center;
+    font-size: 28px;
+}
+
+.tuyendung-noidung {
+    margin: 10px 0 15px 25px;
+}
+
+ul li span {
+    font-weight: bold;
+    color: red;
+}
+
+.ung-tuyen {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.ung-tuyen:hover {
+    background-color: #45a049;
+}
+
+/* CSS style form */
+#ung-tuyen-form-inputs {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#ung-tuyen-form-inputs input[type="text"] {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#ung-tuyen-form-inputs input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px #007bff;
+}
+
+#ung-tuyen-form-inputs button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#ung-tuyen-form-inputs button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#ung-tuyen-form-inputs ::placeholder {
+    color: #999;
+}
+
+#ung-tuyen-form-inputs :-ms-input-placeholder {
+    color: #999;
+}
+
+#ung-tuyen-form-inputs ::-ms-input-placeholder {
+    color: #999;
+}
+
+
+

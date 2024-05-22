@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>PNJ</title>
+	<link rel="shortcut icon" href="img/favicon.ico" />
+
+	<!-- Load font awesome icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+	 crossorigin="anonymous">
+
+	<!-- owl carousel libraries -->
+	<link rel="stylesheet" href="js/owlcarousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="js/owlcarousel/owl.theme.default.min.css">
+	<script src="js/Jquery/Jquery.min.js"></script>
+	<script src="js/owlcarousel/owl.carousel.min.js"></script>
+
+	<!-- our files -->
+	<!-- css -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/topnav.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/banner.css">
+	<link rel="stylesheet" href="css/taikhoan.css">
+	<link rel="stylesheet" href="css/trangchu.css">
+	<link rel="stylesheet" href="css/home_products.css">
+	<link rel="stylesheet" href="css/pagination_phantrang.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<!-- js -->
+	<script src="data/products.js"></script>
+	<script src="js/classes.js"></script>
+	<script src="js/dungchung.js"></script>
+	<script src="js/trangchu.js"></script>
+
+</head>
+
+<body>
+ <!-- Menu Topnav -->
+	<div class="top-nav group">
+        <section>
+            <div class="social-top-nav">
+                <a  class="fa fa-facebook" href="https://www.facebook.com/PNJ.COM.VN"></a>
+                <a class="fa fa-twitter"></a>
+                <a class="fa fa-google"></a>
+                <a class="fa fa-youtube"></a>
+            </div> <!-- End Social Topnav -->
+
+            <ul class="top-nav-quicklink flexContain">
+                <li><a href="index.html"><i class="fa fa-home"></i> Trang chủ</a></li>
+                <li><a href="html/sanpham.html"><i class="fa fa-shopping-bag"></i> Sản phẩm</a></li>
+                <li><a href="html/tuyendung.html"><i class="fa fa-handshake-o"></i> Tuyển dụng</a></li>
+                <li><a href="html/gioithieu.html"><i class="fa fa-info-circle"></i> Giới thiệu</a></li>
+                <li><a href="html/trungtambaohanh.html"><i class="fa fa-map-marker"></i> Chi nhánh</a></li>
+                <li><a href="html/lienhe.html"><i class="fa fa-phone"></i> Liên hệ</a></li>
+            </ul> <!-- End Quick link -->
+        </section><!-- End Section -->
+    </div><!-- End Top Nav  -->`
+	
+
+	<section>
+
+	<!-- start header -->
+		<div class="header group">
+			<div class="logo">
+				<a href="index.html">
+					<img src="img/pnj.png" alt="Trang chủ Pandas Store" title="Trang chủ Trang sức PNJ">
+				</a>
+			</div> <!-- End Logo -->
+			<div class="content">
+				<div class="search-header" style="position: relative; left: 162px; top: 1px;">
+					<form class="input-search" method="get" action="index.html">
+						<div class="autocomplete">
+							<input id="search-box" name="search" autocomplete="off" type="text" placeholder="Nhập từ khóa tìm kiếm...">
+							<button type="submit">
+								<i class="fa fa-search"></i>
+								Tìm kiếm
+							</button>
+						</div>
+					</form> <!-- End Form search -->
+					<div class="tags">
+					<strong>PHÂN LOẠI SẢN PHẨM: </strong>
+					</div>
+				</div> <!-- End Search header -->
+	
+				<div class="tools-member">
+					<div class="member">
+						<a onclick="checkTaiKhoan()">
+							<i class="fa fa-user"></i>
+							Tài khoản
+						</a>
+						<div class="menuMember hide">
+							<a href="html/nguoidung.html">Trang người dùng</a>
+							<a onclick="if(window.confirm('Xác nhận đăng xuất ?')) logOut();">Đăng xuất</a>
+						</div>
+	
+					</div> <!-- End Member -->
+	
+					<div class="cart">
+						<a href="html/giohang.html">
+							<i class="fa fa-shopping-cart"></i>
+							<span>Giỏ hàng</span>
+							<span class="cart-number"></span>
+						</a>
+					</div> <!-- End Cart -->
+	
+				</div><!-- End Tools Member -->
+			</div> <!-- End Content -->
+		</div> <!-- End Header -->
+	
+
+		<div class="banner">
+			<div class="owl-carousel owl-theme"></div>
+		</div> <!-- End Banner -->
+
+		<img src="img/banners/blackFriday.gif" alt="" style="width: 100%;">
+
+		<br>
+		<div class="companyMenu group flexContain"></div>
+
+		<div class="flexContain">
+
+			<div class="pricesRangeFilter dropdown">
+				<button class="dropbtn">Giá tiền</button>
+				<div class="dropdown-content"></div>
+			</div>
+
+			<div class="promosFilter dropdown">
+				<button class="dropbtn">Khuyến mãi</button>
+				<div class="dropdown-content"></div>
+			</div>
+
+			<div class="starFilter dropdown">
+				<button class="dropbtn">Số lượng sao</button>
+				<div class="dropdown-content"></div>
+			</div>
+
+			<div class="sortFilter dropdown">
+				<button class="dropbtn">Sắp xếp</button>
+				<div class="dropdown-content"></div>
+			</div>
+
+		</div> <!-- End khung chọn bộ lọc -->
+
+		<div class="choosedFilter flexContain">
+			<a id="deleteAllFilter" style="display: none;">
+				<h3>Xóa bộ lọc</h3>
+			</a>
+		</div> <!-- Những bộ lọc đã chọn -->
+		<hr>
+
+		<!-- Mặc định mới vào trang sẽ ẩn đi, nếu có filter thì mới hiện lên -->
+		<div class="contain-products" style="display:none"> 
+			<div class="filterName">
+				<input type="text" placeholder="Lọc trong trang theo tên..." onkeyup="filterProductsName(this)">
+			</div> <!-- End FilterName -->
+
+			<ul id="products" class="homeproduct group flexContain">
+				<div id="khongCoSanPham">
+					<i class="fa fa-times-circle"></i>
+					Không có sản phẩm nào
+				</div> <!-- End Khong co san pham -->
+			</ul><!-- End products -->
+
+			<div class="pagination"></div>
+		</div>
+
+		<!-- Div hiển thị khung sp hot, khuyến mãi, mới ra mắt ... -->
+		<div class="contain-khungSanPham" ></div>
+
+        <div class="features">
+            <div class="feature-box">
+                <div class="icon">
+                    <img src="img/free-shipping.png" alt="Free Shipping">
+                </div>
+                <h3>Freeship</h3>
+                <p>Miễn phí vận chuyển</p>
+            </div>
+            <div class="feature-box">
+                <div class="icon">
+                    <img src="img/credit-card.png" alt="Security Payment">
+                </div>
+                <h3>Thanh toán</h3>
+                <p>100% thanh toán an toàn</p>
+            </div>
+            <div class="feature-box">
+                <div class="icon">
+                    <img src="img/undo.png" alt="30 Day Return">
+                </div>
+                <h3> Hoàn đổi</h3>
+                <p> Hoàn đổi trong 30 ngày</p>
+            </div>
+            <div class="feature-box">
+                <div class="icon">
+                    <img src="img/24-7.png" alt="24/7 Support">
+                </div>
+                <h3>Hỗ trợ 24/7 </h3>
+                <p>Hỗ trợ mọi lúc mọi nơi</p>
+            </div>
+        </div>
+	</section> <!-- End Section -->
+	<script>
+		addContainTaiKhoan(); addPlc();
+	</script>
+
+ <!-- hiện các danh mục sp -->
+  <div id="alert">
+	<span id="closebtn">&otimes;</span>
+</div>
+
+<!--Start footer--> 
+<div>
+<footer>
+  <div class="footer-container">
+	<div class="footer-info">
+	  <div class="footer-contact">
+		<img src="img/pnj.png" alt="" style="width: 200px; height: auto;">
+		<p>PNJ là một doanh nghiệp hàng đầu tại Việt Nam trong lĩnh vực chế tác và bán lẻ trang sức bằng vàng, bạc, đá quý.</p> <br>
+		<ul class="footer-contact-info">
+		  <li>
+			<i class="fa fa-envelope"></i> <a href="mailto:PNJ@gmail.com">PNJ@gmail.com</a>
+		  </li>
+		  <li>
+			<i class="fa fa-phone"></i> <a href="tel:02838354409">+ 028 3835 4409</a>
+		  </li>
+		  <li>
+			<i class="fa fa-globe"></i> <a href="https://www.pnj.com.vn/">https://www.pnj.com.vn/</a>
+		  </li>
+		  <li>
+			<i class="fa fa-map-marker"></i> <a href="https://maps.app.goo.gl/6weXketxnfcGbmMC8">12 Nguyễn Văn Bảo, Phường 4, Gò Vấp, Thành phố Hồ Chí Minh, Việt Nam</a>
+
+		  </li>
+		</ul>
+	  </div>
+		<div class="footer-navigation">
+			<h3>VỀ CHÚNG TÔI</h3>
+			<ul class="footer-navigation-list">
+				<li>
+					<a href="index.html">Trang chủ</a>
+				</li>
+				<li>
+					<a href="html/tuyendung.html">Tuyển dụng</a>
+				</li>
+				<li>
+					<a href="html/gioithieu.html">Giới thiệu</a>
+				</li>
+				<li>
+					<a href="html/trungtambaohanh.html">Chi nhánh</a>
+				</li>
+				<li>
+					<a href="html/lienhe.html">Liên hệ</a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer-account">
+			<h3>CHÍNH SÁCH</h3>
+			<ul class="footer-account-list">
+				<li>
+					<a href="#">Chính sách bảo mật</a>
+				</li>
+				<li>
+					<a href="#">Chính sách vận chuyển</a>
+				</li>
+				<li>
+					<a href="#">Chính sách đổi trả</a>
+				</li>
+				<li>
+					<a href="#">Chính sách mua bán</a>
+				</li>
+				<li>
+					<a href="#">Chính sách giải quyết khiếu nại</a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer-newsletter">
+			<h3>HỖ TRỢ KHÁCH HÀNG</h3>
+			<p>Thông tin chi tiết xin liên hệ </p>
+			<form action="#">
+				<input type="email" placeholder="Địa chỉ mail">
+				<button type="submit">Đăng kí</button>
+			</form>
+		</div>
+		<div class="footer-follow-us">
+			<h3>KẾT NỐI VỚI CHÚNG TÔI</h3>
+			<ul class="footer-follow-us-list">
+				<li>
+					<a href="https://www.facebook.com/"> <i class="fa fa-facebook"></i> </a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/"> <i class="fa fa-instagram"></i> </a>
+				</li>
+				<li>
+					<a href="https://www.youtube.com/"> <i class="fa fa-youtube"></i> </a>
+				</li>
+				<li>
+				  <a href="https://twitter.com/"><i class="fa fa-twitter"></i> </a>
+			  </li>
+			</ul>
+			<div class="footer-copyright"> <img src="img/footer/payments.png" alt="VISA">
+			</iframe>
+			<iframe width="250" height="150" src="https://www.youtube-nocookie.com/embed/-nX_fHrr17o?si=z2niLzBBF5PuYY_H&amp;controls=0" title="YouTube video player"></iframe>
+		   </div>
+		</div>
+	</div>
+</div>
+</footer>
+</div>
+	  <!-- Footer End -->
+
+	<i class="fa fa-arrow-up" id="goto-top-page" onclick="gotoTop()"></i>
+</body>
+
+</html>

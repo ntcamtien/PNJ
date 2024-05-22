@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sản phẩm- Trang sức PNJ store</title>
+
+    <!-- Load font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        crossorigin="anonymous">
+
+    <!-- our files -->
+    <!-- css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/topnav.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/taikhoan.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/trangchu.css">
+    <link rel="stylesheet" href="../css/home_products.css">
+	<link rel="stylesheet" href="../css/pagination_phantrang.css">
+
+    <!-- js -->
+    <script src="../data/products.js"></script>
+	<script src="../js/dungchung.js"></script>
+    <script src="../js/sanpham.js"></script>
+    <script src="../js/chitietsanpham.js"></script>
+    <script src="../js/trangchu.js"></script>
+    <script src="../js/classes.js"></script>
+    <script>
+        window.onload = function () {
+            khoiTao();
+            // thêm tags (từ khóa) vào khung tìm kiếm
+            var tags = ["nhan", "bong tai","day chuyen"];
+            for (var t of tags) addTags(t, "index.html?search=" + t);
+        }
+    </script>
+
+</head>
+
+<body>
+    <script> addTopNav();</script>
+
+        <script> addHeader(); </script>
+ 
+
+  <!--start san pham-->
+  <div class="product-grid">
+
+    <!--lọc san pham theo giá-->
+<div class="container">
+    
+    <div class="filter-container">
+        <div class="filter-section">
+            <h2>Lọc theo giá</h2>
+            <div class="filter-option">
+                <input type="checkbox" id="all" checked>
+                <label for="all">Tất cả giá <span class="filter-value"></span></label>
+            </div>
+            <div class="filter-option">
+                <input type="checkbox" id="range1">
+                <label for="range1">0 - 5 triệu <span class="filter-value"></span></label>
+            </div>
+            <div class="filter-option">
+                <input type="checkbox" id="range2">
+                <label for="range2">5 triệu - 10 triệu <span class="filter-value"></span></label>
+            </div>
+            <div class="filter-option">
+                <input type="checkbox" id="range3">
+                <label for="range3">Nhiều hơn 10 triệu<span class="filter-value"></span></label>
+            </div>
+        </div>
+    </div>
+      
+  </div>
+
+
+   <!--cột sản phẩm 1-->
+   <div class="product">
+    <img src="../img/products/gnddddw001071-nhan-kim-cuong-vang-trang-14k-pnj-1.png" alt=""  class="product-img" >
+
+    <a href="chitietsanpham.html?nhan-kim-cuong-vang-trang-14k-pnj" class="product-name">Nhẫn kim cương vàng trắng 14k PNJ</a>
+    <p class="product-price">14.962.000<span class="old-price">15.962.000</span></p>
+    <div class="ratings">
+        <span class="rating-stars">★★★★</span>
+        <span class="rating-count">(99)</span>
+        <button class="add-to-cart" onclick="themVaoGioHang('GN0000Y001955', 'nhan vang 24k pnj khong gan da'); return false;">
+            <span class="tooltiptext" style="font-size: 15px;">Thêm vào giỏ hàng</span>
+        </button>
+    </div>
+
+
+    <img src="../img/products/gn0000y001955-nhan-vang-24k-pnj-1.png" alt=""  class="product-img" >
+    <a href="chitietsanpham.html?nhan-vang-24k-pnj-khong-gan-da" class="product-name">nhan vang 24k pnj khong gan da</a>
+    <p class="product-price">5.744.000<span class="old-price"></span></p>
+    <div class="ratings">
+        <span class="rating-stars">★★★★</span>
+        <span class="rating-count">(99)</span>
+        <button class="add-to-cart" onclick="themVaoGioHang('GN0000Y001955', 'nhan vang 24k pnj khong gan da'); return false;">
+            <span class="tooltiptext" style="font-size: 15px;">Thêm vào giỏ hàng</span>
+        </button>
+    </div>
+
+
+    <img src="../img/products/gnsp00w000060-nhan-cuoi-kim-cuong-vang-trang-14k-pnj-01.png" alt=""  class="product-img" >
+
+    <a href="chitietsanpham.html?nhan-cuoi-vang-trang-14k-dinh-da-saphire-pnj-true-love" class="product-name">nhan cuoi vang trang 14k saphire</a>
+    <p class="product-price">14.962.000<span class="old-price">15.962.000</span></p>
+    <div class="ratings">
+        <span class="rating-stars">★★★★</span>
+        <span class="rating-count">(99)</span>
+        <button class="add-to-cart" onclick="themVaoGioHang('GN0000Y001955', 'nhan vang 24k pnj khong gan da'); return false;">
+            <span class="tooltiptext" style="font-size: 15px;">Thêm vào giỏ hàng</span>
+        </button>
+    </div>
+
+
+    <img src="../img/products/gn0000y001955-nhan-vang-24k-pnj-1.png" alt=""  class="product-img" >
+    <a href="chitietsanpham.html?nhan-vang-24k-pnj-khong-gan-da" class="product-name">nhan vang 24k pnj khong gan da</a>
+    <p class="product-price">5.744.000<span class="old-price"></span></p>
+    <div class="ratings">
+        <span class="rating-stars">★★★★</span>
+        <span class="rating-count">(99)</span>
+        <button class="add-to-cart" onclick="themVaoGioHang('GN0000Y001955', 'nhan vang 24k pnj khong gan da'); return false;">
+            <span class="tooltiptext" style="font-size: 15px;">Thêm vào giỏ hàng</span>
+        </button>
+    </div>
+
+</div>
+<!--cột sản phẩm 2-->
+<div class="product">
+    <img src="../img/products/sp-gnddddw003826-nhan-nam-kim-cuong-vang-trang-14k-pnj-1.png" alt=""  class="product-img" >
+
+    <a href="chitietsanpham.html?nhan-kim-cuong-vang-trang-14k-pnj" class="product-name">nhan nam kim cuong vang trang 14k pnj</a>
+    <p class="product-price">78.054.000<span class="old-price"></span></p>
+    <div class="ratings">
+        <span class="rating-stars">★★★★</span>
+        <span class="rating-count">(99)</span>
+        <button class="add-to-cart" onclick="themVaoGioHang('SN0000Y000084', 'nhan nam kim cuong vang trang 14k pnj'); return false;">
+            <span class="tooltiptext" style="font-size: 15px;">Thêm vào giỏ hàng</span>
+        </button>
+    </div>
+
+
+
+    <img src="../img/products/sn0000y000084-nhan-bac-style-by-pnj-1.png" alt=""  class="product-img" >
+
+    <a href="chitietsanpham.html?nhan-bac-pnj-style-x-chou-chou-" class="product-name">nhan bac pnj style x chou chou</a>
+    <p class="product-price">373.750<span class="old-price"></span></p>
+    <div class="ratings">
+        <span class="rating-stars">★★★</span>
+        <span class="rating-count">(99)</span>
+        <button class="add-to-cart" onclick="themVaoGioHang('GN00GNDDDDW001071', 'nhan bac pnj style x chou chous'); return false;">
+            <span class="tooltiptext" style="font-size: 15px;">Thêm vào giỏ hàng</span>
+        </button>
+    </div>
+
+
+
+    <img src="../img/products/sp-SBXMXMW060192-bong-tai-bac-dinh-da-pnjsilver-1.png" alt=""  class="product-img" >
+
+    <a href="chitietsanpham.html?nhan-kim-cuong-vang-trang-14k-pnj" class="product-name">bong tai bac dinh da style by fnj</a>
+    <p class="product-price">9.995.000<span class="old-price"></span></p>
+    <div class="ratings">
+        <span class="rating-stars">★★★★</span>
+        <span class="rating-count">(99)</span>
+        <button class="add-to-cart" onclick="themVaoGioHang('GNDDDDW003826', 'nhan cuoi vang trang 14k dinh da saphire pnj true love'); return false;">
+            <span class="tooltiptext" style="font-size: 15px;">Thêm vào giỏ hàng</span>
+        </button>
+    </div>
+
+    <img src="../img/products/sp-gnddddw003826-nhan-nam-kim-cuong-vang-trang-14k-pnj-1.png" alt=""  class="product-img" >
+
+    <a href="chitietsanpham.html?nhan-kim-cuong-vang-trang-14k-pnj" class="product-name">nhan nam kim cuong vang trang</a>
+    <p class="product-price">78.054.000<span class="old-price"></span></p>
+    <div class="ratings">
+        <span class="rating-stars">★★★★</span>
+        <span class="rating-count">(99)</span>
+        <button class="add-to-cart" onclick="themVaoGioHang('SN0000Y000084', 'nhan nam kim cuong vang trang 14k pnj'); return false;">
+            <span class="tooltiptext" style="font-size: 15px;">Thêm vào giỏ hàng</span>
+        </button>
+    </div>
+    
+</div>
+  <!--cột sản phẩm 3-->
+<div class="product">
+    <img src="../img/products/gn0000w001540-nhan-vang-trang-y-18k-dinh-da-pnj-1.png" alt=""  class="product-img" >
+
+    <a href="chitietsanpham.html?nhan-kim-cuong-vang-trang-14k-pnj" class="product-name">nhan kim cuong vang trang 14k pnj</a>
+    <p class="product-price">5.736.820<span class="old-price">15.962.000</span></p>
+    <div class="ratings">
+        <span class="rating-stars">★★★★</span>
+        <span class="rating-count">(99)</span>
+        <button class="add-to-cart" onclick="themVaoGioHang('GNSP00W000060', 'nhan vang trang y 18k pnj'); return false;">
+            <span class="tooltiptext" style="font-size: 15px;">Thêm vào giỏ hàng</span>
+        </button>
+    </div>
+
+    <img src="../img/products/gnctxmy000460-nhan-vang-18k-dinh-da-citrine-pnj-1.png" alt=""  class="product-img" >
+
+    <a href="chitietsanpham.html?nhan-vang-18k-dinh-da-citrine-pnj" class="product-name">nhan vang 18k dinh da citrine pnj</a>
+    <p class="product-price">13.458.000<span class="old-price"></span></p>
+    <div class="ratings">
+        <span class="rating-stars">★★★★</span>
+        <span class="rating-count">(99)</span>
+        <button class="add-to-cart" onclick="themVaoGioHang('GN0000Y001955', 'nhan vang 24k pnj khong gan da'); return false;">
+            <span class="tooltiptext" style="font-size: 15px;">Thêm vào giỏ hàng</span>
+        </button>
+    </div>
+
+
+    <img src="../img/products/snxmxmw060083-nhan-bac-dinh-da-pnjsilver-02.png" alt=""  class="product-img" >
+
+    <a href="chitietsanpham.html?nhan-kim-cuong-vang-trang-14k-pnj" class="product-name">nhan bac dinh da style pnjsilver</a>
+    <p class="product-price">995.000<span class="old-price">15.962.000</span></p>
+    <div class="ratings">
+        <span class="rating-stars">★★★★</span>
+        <span class="rating-count">(99)</span>
+        <button class="add-to-cart" onclick="themVaoGioHang('GNCTXMY000460', 'nhan bac dinh da pnjsilver'); return false;">
+            <span class="tooltiptext" style="font-size: 15px;">Thêm vào giỏ hàng</span>
+        </button>
+    </div>
+
+    <img src="../img/products/snxmxmw060083-nhan-bac-dinh-da-pnjsilver-02.png" alt=""  class="product-img" >
+
+    <a href="chitietsanpham.html?nhan-kim-cuong-vang-trang-14k-pnj" class="product-name">nhan bac dinh da style pnjsilver</a>
+    <p class="product-price">995.000<span class="old-price">15.962.000</span></p>
+    <div class="ratings">
+        <span class="rating-stars">★★★★</span>
+        <span class="rating-count">(99)</span>
+        <button class="add-to-cart" onclick="themVaoGioHang('GNCTXMY000460', 'nhan bac dinh da pnjsilver'); return false;">
+            <span class="tooltiptext" style="font-size: 15px;">Thêm vào giỏ hàng</span>
+        </button>
+    </div>
+</div>
+<!--cột sản phẩm 4-->
+<div class="product">
+    <img src="../img/products/sbxmxmw060041-bong-tai-bac-dinh-da-pnjsilver-1.png" alt=""  class="product-img" >
+
+    <a href="chitietsanpham.html?bong-tai-bac-dinh-da-pnjsilver" class="product-name">bong tai bac dinh da style by fnj femininer</a>
+    <p class="product-price">1.345.000<span class="old-price"></span></p>
+    <div class="ratings">
+        <span class="rating-stars">★★★★</span>
+        <span class="rating-count">(99)</span>
+        <button class="add-to-cart" onclick="themVaoGioHang('GN0000Y001955', 'nhan vang 24k pnj khong gan da'); return false;">
+            <span class="tooltiptext" style="font-size: 15px;">Thêm vào giỏ hàng</span>
+        </button>
+    </div>
+
+    <img src="../img/products/sbxmxmw060107-bong-tai-bac-dinh-da-pnjsilver.png" alt=""  class="product-img" >
+
+    <a href="chitietsanpham.html?bong-tai-bac-dinh-da-pnjsilver" class="product-name">bong tai bac dinh da pnjsilver</a>
+    <p class="product-price">1.675.000<span class="old-price"></span></p>
+    <div class="ratings">
+        <span class="rating-stars">★★★★</span>
+        <span class="rating-count">(99)</span>
+        <button class="add-to-cart" onclick="themVaoGioHang('GSBXMXMW060136', 'bong tai bac dinh da pnjsilver'); return false;">
+            <span class="tooltiptext" style="font-size: 15px;">Thêm vào giỏ hàng</span>
+        </button>
+    </div>
+
+    <img src="../img/products/gnddddw001071-nhan-kim-cuong-vang-trang-14k-pnj-1.png" alt=""  class="product-img" >
+
+    <a href="chitietsanpham.html?nhan-kim-cuong-vang-trang-14k-pnj" class="product-name">nhan kim cuong vang trang 14k</a>
+    <p class="product-price">14.962.000<span class="old-price">15.962.000</span></p>
+    <div class="ratings">
+        <span class="rating-stars">★★★★</span>
+        <span class="rating-count">(99)</span>
+        <button class="add-to-cart" onclick="themVaoGioHang('GN0000Y001955', 'nhan vang 24k pnj khong gan da'); return false;">
+            <span class="tooltiptext" style="font-size: 15px;">Thêm vào giỏ hàng</span>
+        </button>
+    </div>
+
+    <img src="../img/products/snxmxmw060083-nhan-bac-dinh-da-pnjsilver-02.png" alt=""  class="product-img" >
+
+    <a href="chitietsanpham.html?nhan-kim-cuong-vang-trang-14k-pnj" class="product-name">nhan bac dinh da style pnjsilver</a>
+    <p class="product-price">995.000<span class="old-price">15.962.000</span></p>
+    <div class="ratings">
+        <span class="rating-stars">★★★★</span>
+        <span class="rating-count">(99)</span>
+        <button class="add-to-cart" onclick="themVaoGioHang('GNCTXMY000460', 'nhan bac dinh da pnjsilver'); return false;">
+            <span class="tooltiptext" style="font-size: 15px;">Thêm vào giỏ hàng</span>
+        </button>
+    </div>
+</div>
+
+</div> 
+
+</div>
+
+  <!-- qua trang mới--> 
+<div class="pagination">
+    <a href="#" class="prev" onclick="changePage(-1)">&#10094;</a>
+    <span class="page-info">Page <span id="currentPage">1</span> of <span id="totalPages">10</span></span>
+    <a href="#" class="next" onclick="changePage(1)">&#10095;</a>
+</div>
+
+
+<script>let currentPage = 1;
+    const totalPages = 10; 
+    
+    document.getElementById('totalPages').textContent = totalPages;
+    
+    function changePage(step) {
+        currentPage += step;
+        if (currentPage < 1) currentPage = 1;
+        if (currentPage > totalPages) currentPage = totalPages;
+        document.getElementById('currentPage').textContent = currentPage;
+        
+    }</script>
+
+
+ 
+    <script> addContainTaiKhoan() </script>
+
+  <!--Start footer--> 
+  <div class="footer"><script>addFooter();</script></div>
+  <!-- Footer End -->
+    <i class="fa fa-arrow-up" id="goto-top-page" onclick="gotoTop()"></i>
+</body>
+
+</html>

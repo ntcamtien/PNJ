@@ -1,0 +1,318 @@
+#khongCoSanPham {
+	opacity: 0;
+	width: 0;
+	color: red;
+	font-size: 30px;
+	font-weight: bold;
+	height: 310px;
+}
+/* Home Product */
+	.homeproduct {
+		list-style-type: none;  
+	}
+
+	/* <li> trong homeproduct có class="sanPham" , khai báo trong classes.js */
+	.sanPham {
+		width: 238px;
+		border: 1px solid #eee;
+    	-webkit-transition-duration: .3s;
+    	     -o-transition-duration: .3s;
+    	        transition-duration: .3s;
+	}
+	.sanPham a {
+		display: block;
+		position: relative;
+		padding: 10px 0;
+		height: 310px;
+	}
+	.sanPham a .price span {
+	    display: inline-block;
+	    vertical-align: middle;
+	    font-size: 12px;
+	    text-decoration: line-through;
+	    margin-left: 5px;
+	    color: #222;
+	}
+	/* Name and image */
+		/* Hinh anh san pham */
+		.sanPham a img {
+			display: block;
+			margin: 15px auto;
+			-webkit-transition-duration: 0.2s;
+			     -o-transition-duration: 0.2s;
+			        transition-duration: 0.2s;
+			width: 200px;
+			height: 200px;
+		}
+		/* Di chuyen anh? len tren */
+		.sanPham a:hover > img {
+			margin: 5px auto 25px;
+		}
+		/* Ten san pham */
+		.sanPham h3 {
+			display: block;
+			padding: 0 10px;
+			color: #333;
+			line-height: 1.3em;
+			font-size: 15px;
+			font-weight: normal;
+		}
+		/* Hightlight ten san pham khi hover */
+		.sanPham a:hover h3 {
+			color: #288ad6;
+        }
+	/* ====== End Name and image ===== */
+
+	/* Price */
+		/* la div chua strong */
+		.sanPham .price {
+			display: block;
+			padding: 5px 10px 0px 10px;
+		}
+		/* strong la gia tien in dam */
+		.sanPham strong {
+		    display: inline-block;
+		    vertical-align: middle;
+		    overflow: hidden;
+		    font-size: 14px;
+		    color: #e10c00;
+		    line-height: 15px;
+		}
+	/* ===== End Price ===== */
+
+	/* Rating */
+		.sanPham .ratingresult {
+			padding: 5px 10px;
+		}
+		.sanPham .ratingresult span {
+		    display: inline-block;
+		    /*position: relative;*/
+		    top: 1px;
+		    margin-left: 5px;
+		    vertical-align: middle;
+		    text-decoration: none;
+		    font-size: 12px;
+		    color: #777;
+		}
+		.fa-star, .fa-star-o {
+			color: orange;
+		}
+	/* ===== End Rating ===== */
+
+	/* Khuyen mai */
+		/* label la tag khuyen mai */
+		.sanPham label {
+		    display: inline-block;
+		    position: absolute;
+		    top: 207px;
+		    left: 10px;
+		    font-size: 12px;
+		    color: #fff;
+		    font-weight: 600;
+		    border-radius: 2px;
+		    padding: 3px 5px 0;
+		    height: 18px;
+		}
+		/* Giam gia thanh */
+		.sanPham label.giamgia {
+			background-image: -webkit-gradient(linear, left top, right top, from(#ff9c00), to(#ec1f1f));
+		    background-image: -webkit-linear-gradient(left, #ff9c00 0%, #ec1f1f 100%);
+		    background-image: -o-linear-gradient(left, #ff9c00 0%, #ec1f1f 100%);
+		    background-image: linear-gradient(90deg, #ff9c00 0%, #ec1f1f 100%);
+		    border-radius: 10px;
+		    padding: 1px 7px;
+		    padding-left: 0;
+		    padding-right: 10px;
+		}
+		/* Kí tự sấm sét */
+		.fa-bolt { 
+			width: 20px;
+			height: 20px;
+			text-align: center;
+			line-height: 20px;
+			border-radius: 50%;
+			background: #f21;
+			color: white;
+		}
+		/* Tra gop 0% */
+		.sanPham label.giamgia% {
+		    background: #f28902;
+		}
+		/* Gia re online */
+		.sanPham label.giareonline {
+			background: #3fb846;
+		}
+		/* Moi ra mat */
+		.sanPham label.moiramat {
+			background: #1191f8;
+		}
+	/* ===== End Khuyen mai ====== */
+
+	/* ===== Them Vao Gio Hang ==== */
+		/* tooltip được css bên style.css */
+		.themvaogio {
+			z-index: 20;
+			border: 1px solid #e3e7eb;
+			border-radius: 50%;
+			width: 1.5em;
+			height: 1.5em;
+			font-size: 1.5em;
+			color: rgb(163, 161, 161);
+			background: none;
+			transition-duration: .2s;
+			cursor: pointer;
+		}
+		.themvaogio:hover {
+			color: black;
+			background-color: #e6e6e6;
+			box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.2);
+		}
+		.themvaogio:active {
+			box-shadow: none;
+		}
+		
+	/* =====  ==== */
+
+
+
+
+/* CSS cho container */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các phần tử con xuống dòng khi không đủ không gian */
+}
+
+
+
+
+/* CSS cho filter container */
+.filter-container {
+    width: 300px;
+    background: #f9f9f9;
+    padding: 20px;
+  
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-right: 20px; /* Tạo khoảng cách giữa filter và sản phẩm */
+}
+
+/* CSS cho filter section */
+.filter-section {
+    margin-bottom: 20px; /* Tạo khoảng cách dưới filter */
+}
+
+.filter-section h2 {
+    font-size: 18px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 10px;
+}
+
+/* CSS cho filter option */
+.filter-option {
+    margin-top: 10px;
+    display: flex; /* Hiển thị các phần tử trong filter-option trên cùng một hàng */
+    align-items: center; /* Căn dòng theo chiều ngang */
+}
+
+.filter-option label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    flex: 1; /* Để chia phần tử label và span bằng nhau */
+}
+
+.filter-option input {
+    margin-right: 10px;
+}
+
+.filter-option label span {
+    background: #f0f0f0;
+    padding: 2px 6px;
+    border-radius: 12px;
+    margin-left: 10px; /* Khoảng cách giữa ô tick và giá trị lọc */
+}
+
+/* CSS cho product grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.product:hover img {
+    transform: scale(1.1);
+}
+
+.product-name {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #333;
+    margin-top: 5px;
+}
+
+.old-price {
+    color: #999;
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+
+.ratings {
+    margin-top: 10px;
+}
+
+.rating-stars {
+    color: #FFD700;
+}
+
+.rating-count {
+    color: #666;
+}
+
+/* CSS cho nút "Thêm vào giỏ hàng" */
+.add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #45a049;
+}
+
+
+
+
+
+
